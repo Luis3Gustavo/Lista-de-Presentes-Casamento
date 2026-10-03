@@ -1,0 +1,204 @@
+/* Configuração Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FBF9F6;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 64px 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #EAE5DF;
+}
+
+header span {
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #9A8470;
+    display: block;
+    margin-bottom: 8px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4A3E3D;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 16px 0;
+}
+
+.linha-divisoria {
+    width: 64px;
+    height: 1px;
+    background-color: #9A8470;
+    margin: 24px auto;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #70665C;
+    max-width: 450px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Área dos Presentes (Grid) */
+main {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 16px;
+}
+
+#loading {
+    text-align: center;
+    padding: 48px 0;
+    color: #70665C;
+    font-size: 0.9rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #EAE5DF;
+    border-bottom-color: #9A8470;
+    border-radius: 50%;
+    margin: 0 auto 16px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Grid de Cards */
+#lista-presentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilo do Card de Presente */
+.presente-card {
+    background-color: #ffffff;
+    border: 1px solid #EAE5DF;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.presente-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(154, 132, 112, 0.15);
+}
+
+.container-imagem {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #FBF9F6;
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-imagem img.reservado-img {
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+.tag-reservado {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4A3E3D;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.titulo-presente {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    color: #4A3E3D;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.container-botao {
+    padding: 0 20px 20px 20px;
+}
+
+/* Botões */
+.btn-presentear {
+    width: 100%;
+    background-color: #4A3E3D;
+    color: #ffffff;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-presentear:hover {
+    background-color: #5C4E4D;
+}
+
+.btn-indisponivel {
+    width: 100%;
+    background-color: #EAE5DF;
+    color: #A3988E;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    cursor: not-allowed;
+    border-radius: 4px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 32px;
+    border-top: 1px solid #EAE5DF;
+    background-color: #ffffff;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #9A8470;
+}

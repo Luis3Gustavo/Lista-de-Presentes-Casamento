@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes de Casamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <span>Seja bem-vindo à nossa</span>
+        <h1>Keisseane & Luis Gustavo</h1>
+        <div class="linha-divisoria"></div>
+        <p>
+            A sua presença é o nosso maior presente, mas se desejar nos abençoar com algo para o nosso novo lar, escolha um item abaixo.
+        </p>
+    </header>
+
+    <!-- Seção Principal dos Presentes -->
+    <main>
+        <!-- Indicador de Carregamento (Loading) -->
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Carregando nossa lista com amor...</p>
+        </div>
+
+        <!-- Grid onde os presentes serão inseridos via JS -->
+        <div id="lista-presentes" class="hidden">
+            <!-- Os cards de presentes entram aqui automaticamente -->
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        COM CARINHO, KEISSEANE & LUIS GUSTAVO &copy; 2026
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
